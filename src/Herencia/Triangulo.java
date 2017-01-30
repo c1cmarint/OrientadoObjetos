@@ -9,6 +9,7 @@ public class Triangulo extends Figura {
 		
 		base	= b;
 		altura	= a;
+		longitudDeLado=base;
 		numeroDeLados=3;
 		numeroDeFiguras++;
 	}
@@ -23,6 +24,7 @@ public class Triangulo extends Figura {
 				"Base " + base + "\n" +
 				"Altura " + altura + "\n" +
 				"Area " + area() + "\n" +
+				"Perimetro " + perimetro() + "\n" +
 				"Numero de Lados= " + numeroDeLados + "\n" +
 				"Figuras Totales= " + numeroDeFiguras;
 	}

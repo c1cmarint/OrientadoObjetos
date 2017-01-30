@@ -1,26 +1,28 @@
 package Herencia;
 
-public class Cuadrado extends Figura{
+public class Circulo extends Figura{
+	private double radio;
 	
-	private double lado;
-
-	
-	public Cuadrado(double b){
+	public Circulo(double r){
 		
-		lado= b;
-		longitudDeLado = lado;
-		numeroDeLados=4;
+		radio= r;
+		
+		numeroDeLados=1;
 		numeroDeFiguras++;
 	}
 	
 	public double area(){
-		return lado*lado;
+		return 3.14*radio*radio;
+	}
+	
+	public double perimetro(){
+		return 2*3.14*radio;
 	}
 	
 	public String toString(){
-		return "Valores del Triángulo\n" +
+		return "Valores del Rectángulo\n" +
 				"-----------------------"+ "\n"+
-				"Lado " + lado + "\n" +
+				"Radio " + radio + "\n" +
 				"Area " + area() + "\n" +
 				"Perimetro " + perimetro() + "\n" +
 				"Numero de Lados= " + numeroDeLados + "\n" +
