@@ -95,7 +95,7 @@ public class Racional {
 		setDenominador(entrada.nextInt());
 	}
 	
-	public void print(){
-		System.out.println("El numerador es " + this.numerador + " y el denominador " + this.denominador);
+	public String toString(){
+		return ("El numerador es " + this.numerador + " y el denominador " + this.denominador);
 	}			
 }
