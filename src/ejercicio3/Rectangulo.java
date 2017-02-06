@@ -8,13 +8,6 @@ public class Rectangulo {
 	private Complejo supizq;
 	private Complejo supder;
 	
-	public Rectangulo(){
-		infizq = new Complejo(0.0f,0.0f);
-		infder = new Complejo(0.0f,0.0f);
-		supder = new Complejo(0.0f,0.0f);
-		supizq = new Complejo(0.0f,0.0f);
-	}
-	
 	public Rectangulo(Complejo infizq,Complejo infder,Complejo supder,Complejo supizq){
 		this.infizq = infizq;
 		this.infder = infder;
@@ -22,15 +15,21 @@ public class Rectangulo {
 		this.supizq = supizq;
 	}
 	
-	public float superficie(){
-		float superficie;
-		superficie=supder.getReal()*infder.getReal();
-		return superficie;
+	public Rectangulo(double base, double altura){
+		this.infizq = new Complejo(0,0);
+		this.infder = new Complejo(0,base);
+		this.supder = new Complejo(altura,base);
+		this.supizq = new Complejo(altura,0);
 	}
 	
-	public void desplazar(){
-		Scanner entrada = new Scanner(System.in);
-		
-		
+	public double area(){
+		return (supder.getReal()-infizq.getImaginario()*supder.getImaginario()-infizq.getReal());
+	}
+	
+	public void desplazar(Complejo desplazar){
+		this.infder = desplazar.suma(this.infder);
+		this.infizq = desplazar.suma(this.infizq);
+		this.supder = desplazar.suma(this.supder);
+		this.supizq = desplazar.suma(this.supizq);
 	}
 }

@@ -1,9 +1,11 @@
 package ejercicio8;
 import java.util.GregorianCalendar;
 import miLibreria.Entrada;
+import java.time.*;
 public class Fecha {
 	
 	private GregorianCalendar fecha;
+	private LocalDate fecha1;
 	
 	public Fecha(){
 		fecha.set(1,1,1900);
@@ -25,11 +27,6 @@ public class Fecha {
 		return fecha.isLeapYear(this.fecha.YEAR);
 	}
 	
-	public int diasMes(int dias){
-		int[] diasMes = {31,28,31,30,31,30,31,31,30,31,30,31};
-		
-		
-	}
 	
 	
 }
