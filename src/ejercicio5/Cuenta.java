@@ -6,10 +6,10 @@ public class Cuenta {
 	private int DNI;
 	private double saldo;
 	private double intereses;
-	public int contcuenta=0;
+	public int contcuenta=100001;
 	
 	public Cuenta(){
-		numcuenta = 100001+contcuenta;
+		numcuenta = contcuenta;
 		contcuenta++;
 		DNI = 0;
 		saldo = 0;
