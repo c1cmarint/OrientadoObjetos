@@ -19,9 +19,8 @@ public class Persona {
 	
 	public String toString(){
 		
-		return 	"Los datos de la persona son:\n" +
-				"Nombre: " + this.nombre + "\n" +
-				"DNI : " + this.DNI + "-" + "\n";
+		return  this.nombre + "\n" +
+				"DNI : " + this.DNI;
 	}
 	
 	

@@ -2,36 +2,37 @@ package ejercicioherencia;
 
 public abstract class Tarjeta {
 
-	protected int numcuenta;
-	protected String titular;
-	
+	protected int numtarjeta;
+	protected Persona titular;	
 	protected Cuenta cuenta;
 	
-	public Tarjeta(){
-		numcuenta=0;
-		titular="";
-		cuenta = new Cuenta();
-	}
-	
-	public Tarjeta(int numcuenta,double saldo,String titular){
-		this.numcuenta=numcuenta;
-		this.titular=titular;
-		cuenta = new Cuenta(numcuenta,titular);
+	public Tarjeta(int numtarjeta,Persona titular,Cuenta cuenta){
+		this.numtarjeta=numtarjeta;
+		this.titular = titular;
+		this.cuenta=cuenta;
 	}
 	
 	public void setNumtarjeta(int numtarjeta){
-		this.numcuenta=numcuenta;
+		this.numtarjeta=numtarjeta;
 	}
 	
-	public void setTitular(String titular){
+	public void setTitular(Persona titular){
 		this.titular=titular;
 	}
 	
-	public int getNumcuenta(){
-		return numcuenta;
+	public void setCuenta(Cuenta cuenta){
+		this.cuenta=cuenta;
 	}
 	
-	public String getTitular(){
+	public int getNumTarjeta(){
+		return numtarjeta;
+	}
+	
+	public Persona getTitular(){
 		return titular;
+	}
+	
+	public Cuenta getCuenta(){
+		return cuenta;
 	}
 }

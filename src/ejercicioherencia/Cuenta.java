@@ -31,17 +31,14 @@ public class Cuenta {
 		return saldo;
 	}
 	
-	public double ingresar(double ingresar){
+	public void ingresar(double ingresar){
 		
-		return this.saldo=this.saldo + ingresar;
+		this.saldo=this.saldo + ingresar;
 	}
 	
-	public double retirar(double retirar){
+	public void retirar(double retirar){
+		this.saldo-=retirar;
 		
-		if(this.saldo>0){
-			this.saldo=this.saldo - retirar;
-		}
-		return this.saldo;
 	}
 	
 	public String toString(){

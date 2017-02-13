@@ -4,7 +4,7 @@ public class Prueba {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Empleado empleado = new Empleado(73102135,1200,20.5,5,20,false,0);
+		Empleado empleado = new Empleado(73102135,1200,20.5,5,20,true,20);
 		
 		System.out.println(empleado.printAll());
 	}
