@@ -1,28 +1,29 @@
 package ejercicioherencia;
 
 public class Debito extends Tarjeta{
+	protected double cuota;
 	
-	public Debito(int numtarjeta,Persona titular,Cuenta cuenta){
+	public Debito(int numtarjeta,Persona titular,Cuenta cuenta,double cuota){
 		super(numtarjeta, titular,cuenta);
-		this.numtarjeta=numtarjeta;
-		this.titular=titular;
-		this.cuenta=cuenta;
+		this.cuota = cuota;
 	}
 	
-	public void pagoDebito(double pago){
-		if(pago<=this.cuenta.getSaldo()){
-			this.cuenta.retirar(pago);
-		}else{
-			System.out.println("No hay suficiente dinero.");
-		}
+	public void setCuota(double cuota){
+		this.cuota=cuota;
 	}
 	
-	public void cuotaAnual(){
-		
+	public double getCuota(){
+		return cuota;
+	}
+	
+	public void cuotaTarjeta(){
+		this.cuenta.ingresar(cuota);
 	}
 	
 	public String toString(){
-		return "Numero de tarjeta: " + this.numtarjeta + "\n" + 
+		return 	"              Datos tarjeta(Debito)                 " + "\n" +
+				"-----------------------------------------------" + "\n" +
+				"Numero de tarjeta: " + this.numtarjeta + "\n" + 
 				"Titular: " + this.titular + "\n" + 
 				"Saldo: " + this.cuenta.getSaldo();
 	}

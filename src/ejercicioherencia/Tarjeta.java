@@ -24,6 +24,7 @@ public abstract class Tarjeta {
 		this.cuenta=cuenta;
 	}
 	
+	
 	public int getNumTarjeta(){
 		return numtarjeta;
 	}
@@ -34,5 +35,13 @@ public abstract class Tarjeta {
 	
 	public Cuenta getCuenta(){
 		return cuenta;
+	}
+	
+	public void pagoDebito(double pago){
+		if(pago<=this.cuenta.getSaldo()){
+			this.cuenta.retirar(pago);
+		}else{
+			System.out.println("No hay suficiente dinero.");
+		}
 	}
 }
